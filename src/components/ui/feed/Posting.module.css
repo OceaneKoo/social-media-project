@@ -1,0 +1,20 @@
+/** @format */
+
+.cardContainer {
+	width: 100%;
+}
+.iconStyle {
+	/* display: flex;
+	align-items: center;
+	justify-content: flex-start; */
+}
+/* .like {
+	flex: 4;
+}
+
+.share {
+	flex: 4;
+} */
+.comment {
+	text-align: center;
+}
