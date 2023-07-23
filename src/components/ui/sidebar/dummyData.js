@@ -8,21 +8,21 @@ import Groups2Icon from '@mui/icons-material/Groups2';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 export const DUMMY_DATAS = [
-	{ data: 'Memories', icon: <AccessTimeIcon /> },
+	// { data: 'Memories', icon: <AccessTimeIcon /> },
 	{ data: 'Saved', icon: <BookmarkIcon /> },
-	{ data: 'Pages', icon: <PagesIcon /> },
+	// { data: 'Pages', icon: <PagesIcon /> },
 	{ data: 'Feed', icon: <FeedIcon /> },
 	{
 		data: 'Friend',
 		icon: <PeopleIcon />,
 	},
-	{ data: 'Group', icon: <Groups2Icon /> },
+	// { data: 'Group', icon: <Groups2Icon /> },
 	{
 		data: 'Videos',
 		icon: <OndemandVideoIcon />,
 	},
-	{
-		data: 'Events',
-		icon: <CelebrationIcon />,
-	},
+	// {
+	// 	data: 'Events',
+	// 	icon: <CelebrationIcon />,
+	// },
 ];

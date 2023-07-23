@@ -11,11 +11,15 @@ export default function Home() {
 	return (
 		<div>
 			<Topbar />
-			<Grid container>
+			<Grid
+				sx={{ position: 'fixed' }}
+				container
+				className={classes.container}>
 				<Grid
 					item
-					xs={3}>
-					<Sidebar style={{ position: 'sticky' }} />
+					xs={3}
+					sx={{ backgroundColor: '#f0efeb' }}>
+					<Sidebar />
 				</Grid>
 				<Grid
 					item

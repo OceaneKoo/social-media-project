@@ -1,0 +1,25 @@
+/** @format */
+.messageContainer {
+}
+.search {
+	width: 80%;
+	height: 30px;
+	background-color: #f0efeb;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	margin: 10px auto;
+	/* box-shadow: 10px 5px 5px white; */
+}
+.searchIcon {
+	font-size: 20px !important;
+	margin-left: 10px;
+}
+.searchInput {
+	border: none;
+	/* width: 70px; */
+	background-color: #f0efeb;
+}
+.searchInput:focus {
+	outline: none;
+}

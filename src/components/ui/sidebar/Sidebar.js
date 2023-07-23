@@ -14,21 +14,18 @@ import { DUMMY_DATAS } from './dummyData';
 export default function Sidebar() {
 	return (
 		<div className={classes.sidebar}>
-			{/* <Grid container>
-				<Grid
-					item
-					xs={3}> */}
-			{DUMMY_DATAS.map((data) => (
-				<ul>
-					<li>
-						<Card className={classes.cardItems}>
-							<span>{data.icon}</span>
-							{data.data}
-						</Card>
-					</li>
-				</ul>
-			))}
-
+			<div className={classes.itemContainer}>
+				{DUMMY_DATAS.map((data) => (
+					<ul className={classes.listItems}>
+						<li>
+							<Card className={classes.cardItems}>
+								<span>{data.icon}</span>
+								{data.data}
+							</Card>
+						</li>
+					</ul>
+				))}
+			</div>
 			<ListItemButton>
 				<ListItemIcon>
 					<HelpIcon />
@@ -41,8 +38,6 @@ export default function Sidebar() {
 				</ListItemIcon>
 				<ListItemText primary='Settings and Privacy' />
 			</ListItemButton>
-			{/* </Grid> */}
-			{/* </Grid> */}
 		</div>
 	);
 }

@@ -1,0 +1,8 @@
+/** @format */
+.items {
+	display: flex;
+	justify-content: flex-start;
+}
+.likeIcon {
+	font-size: 13px;
+}

@@ -23,7 +23,3 @@
 .inputText:focus {
 	outline: none;
 }
-.icon {
-	/* justify-content: flex-end; */
-	color: #9bb1ff;
-}

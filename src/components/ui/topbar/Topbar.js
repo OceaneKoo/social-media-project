@@ -34,10 +34,10 @@ export default function Topbar() {
 							<HomeIcon />
 						</div>
 
-						<div className={styles.iconItem}>
+						{/* <div className={styles.iconItem}>
 							<PeopleIcon />
 							<span className={styles.badge}>1</span>
-						</div>
+						</div> */}
 						<div className={styles.iconItem}>
 							<PlayCircleIcon />
 						</div>
@@ -50,6 +50,10 @@ export default function Topbar() {
 					item
 					xs={3}>
 					<div className={styles.items}>
+						<div className={styles.iconItem}>
+							<PeopleIcon />
+							<span className={styles.badge}>1</span>
+						</div>
 						<div className={styles.iconItem}>
 							<NotificationsIcon />
 							<span className={styles.badge}>1</span>
