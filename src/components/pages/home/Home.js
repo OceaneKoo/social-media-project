@@ -10,7 +10,7 @@ import Rightbar from '../../ui/rightbar/Rightbar';
 export default function Home() {
 	return (
 		<div>
-			<Topbar />
+			
 			<Grid
 				sx={{ position: 'fixed' }}
 				container

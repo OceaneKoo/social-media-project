@@ -1,0 +1,30 @@
+/** @format */
+.container {
+	background-color: #f0efeb;
+	padding-left: 20px;
+}
+.cardContainer {
+	display: flex;
+	width: auto;
+	white-space: nowrap;
+	overflow-x: scroll;
+}
+.cardItem {
+	flex-shrink: 0;
+}
+.header {
+	font-size: 20px;
+	padding: 10px;
+}
+.section {
+	position: relative;
+}
+.icon {
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+	padding: 0px;
+	margin-right: 5px;
+	color: white;
+	background-color: #4c5b61;
+}

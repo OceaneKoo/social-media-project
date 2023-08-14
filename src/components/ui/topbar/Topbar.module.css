@@ -8,6 +8,8 @@
 	position: sticky;
 	top: 0;
 	z-index: 3;
+	padding: 10px;
+
 	/* padding-bottom: 10px; */
 }
 .search {
@@ -40,7 +42,7 @@
 	position: relative;
 }
 .iconItem:hover {
-	color: #4c5b61;
+	color: #242729;
 }
 .badge {
 	width: 15px;
