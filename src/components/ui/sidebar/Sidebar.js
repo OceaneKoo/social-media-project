@@ -18,7 +18,9 @@ export default function Sidebar() {
 				{DUMMY_DATAS.map((data) => (
 					<ul className={classes.listItems}>
 						<li>
-							<Card className={classes.cardItems}>
+							<Card
+								sx={{ backgroundColor: '#f0efeb' }}
+								className={classes.cardItems}>
 								<span>{data.icon}</span>
 								{data.data}
 							</Card>

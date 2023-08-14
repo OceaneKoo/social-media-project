@@ -9,6 +9,7 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import EmailIcon from '@mui/icons-material/Email';
+import profilePic from '../../../assets/images/pic3.jpg';
 export default function Topbar() {
 	return (
 		<div>
@@ -64,7 +65,7 @@ export default function Topbar() {
 						</div>
 						<img
 							className={styles.img}
-							src='https://i.pinimg.com/564x/5a/10/5d/5a105d7900c685466e5ffa860509e471.jpg'
+							src={profilePic}
 						/>
 					</div>
 				</Grid>

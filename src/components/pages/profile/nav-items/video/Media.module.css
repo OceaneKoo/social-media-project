@@ -1,0 +1,36 @@
+/** @format */
+
+.container {
+	margin: auto;
+	width: 1000px;
+	height: auto;
+}
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+.header {
+	font-weight: bold;
+	margin: 10px;
+}
+.customContainer {
+	object-fit: cover;
+	position: relative;
+	margin: 0px 3px 3px 3px;
+}
+.media {
+	width: 155px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.editIcon {
+	position: absolute;
+	z-index: 999;
+	color: white;
+	padding: 3px;
+	border-radius: 50%;
+	background-color: #5f5f5e80;
+	right: 10px;
+	top: 10px;
+}

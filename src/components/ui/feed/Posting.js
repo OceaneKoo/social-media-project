@@ -14,19 +14,19 @@ import {
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import classes from './Posting.module.css';
 import CardBottom from './CardBottom';
-import profile from '../../../assets/profile.jpg';
+import profilePicture from '../../../assets/images/pic3.jpg';
 export default function Posting(props) {
 	return (
 		<div>
 			<Card className={classes.cardContainer}>
 				<CardHeader
-					title='John'
-					subheader='Jan 1 2023'
+					title={props.name}
+					subheader={props.date}
 					avatar={
 						<Avatar
 							aria-label='post'
 							alt=''
-							src={profile}></Avatar>
+							src={props.profilePicture}></Avatar>
 					}
 					action={
 						<IconButton aria-label='setting'>
