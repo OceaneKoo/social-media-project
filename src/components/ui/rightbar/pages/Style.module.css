@@ -1,0 +1,14 @@
+/** @format */
+
+.card {
+	height: calc(100vh - 70px);
+	position: absolute;
+	top: 45px;
+	right: 30px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	height: auto;
+	z-index: 999;
+}
+.invisible {
+	display: none;
+}

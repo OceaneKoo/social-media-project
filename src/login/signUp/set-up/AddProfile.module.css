@@ -7,7 +7,11 @@
 	margin: auto;
 	display: grid;
 } */
-
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 430px;
+}
 .icon {
 	position: relative;
 	width: 200px;
@@ -19,6 +23,17 @@
 	margin: 10px;
 }
 .button {
-	/* position: relative;
-	bottom: 0; */
+	padding: 10px;
+	border-radius: 50px;
+	background-color: #618985;
+	border: none;
+	margin: 5px 0px;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+.color {
+	background-color: #e4d9ff;
+	border: 1px solid #618985;
+	color: black;
 }

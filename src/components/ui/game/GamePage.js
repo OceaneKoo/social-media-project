@@ -1,12 +1,12 @@
 /** @format */
 /** @format */
-import React, { useRef, useState } from 'react';
-import GameCard from './GameCard';
-import CardItem from './CardItem';
-import classes from './GamePage.module.css';
-import { IconButton } from '@mui/material';
-import { gameData } from '../../../assets/profile-data/game-data';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import React, { useRef, useState } from "react";
+import GameCard from "./GameCard";
+import CardItem from "./CardItem";
+import classes from "./GamePage.module.css";
+import { IconButton } from "@mui/material";
+import { gameData } from "../../../assets/profile-data/game-data";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 export default function GamePage() {
 	const cardRef = useRef(null);
 	const [position, setPosition] = useState(0);
@@ -14,8 +14,8 @@ export default function GamePage() {
 		const container = cardRef.current;
 		const newPosition = position + container.clientWidth;
 
-		container.scrollTo({ left: newPosition, behavior: 'smooth' });
-		console.log('clicked');
+		container.scrollTo({ left: newPosition, behavior: "smooth" });
+		console.log("clicked");
 
 		setPosition(newPosition);
 	};

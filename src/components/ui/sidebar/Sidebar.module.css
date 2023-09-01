@@ -1,17 +1,18 @@
 /** @format */
 
 .sidebar {
-	border: 1px solid #f0efeb;
+	/* border: 1px solid #f0efeb; */
 	/* flex: 3; */
-	background: white;
+	background: #f0efeb;
 	height: calc(100vh - 50px);
-	overflow-y: 'scroll';
+	overflow-y: auto;
+	/* overflow: "scroll"; */
 	/* border: 1px solid red; */
 }
-/* .sidebar::-webkit-scrollbar {
-	width: 2px;
+.sidebar::-webkit-scrollbar {
+	width: 10px;
+	background-color: #c5c5c5;
 }
-*/
 
 .cardItems {
 	width: 80%;

@@ -1,38 +1,90 @@
 /** @format */
-
-import React from 'react';
-import classes from './Login.module.css';
-import { Link } from 'react-router-dom';
-import { LogInButton, SignUpButton } from './to-reuse/custom-component';
+import { useNavigate } from "react-router-dom";
+import React from "react";
+import classes from "./Login.module.css";
+import { Link } from "react-router-dom";
+import { Button, SignUpButton } from "./to-reuse/custom-component";
+import userinput from "./hook/user-input";
+import ErrorElement from "./to-reuse/ErrorElement";
 export default function Login(props) {
+	const navigate = useNavigate();
+	const isEmail = (value) => value.trim().includes("@");
+	const isPassword = (value) => value.trim().length > 6;
+	const {
+		value: email,
+		isValid: isEmailValid,
+		hasError: emailHasError,
+		valueChangeHandler: emailChangeHandler,
+		inputBlurHandler: emailIsTouched,
+		reset: resetEmail,
+	} = userinput(isEmail);
+	const {
+		value: password,
+		isValid: isPasswordValid,
+		hasError: passwordHasError,
+		valueChangeHandler: passwordChangeHandler,
+		inputBlurHandler: passwordIsTouched,
+		reset: resetPassword,
+	} = userinput(isPassword);
+	let formIsValid = false;
+	if (isEmailValid && isPasswordValid) formIsValid = true;
+
+	const submitHandler = (event) => {
+		console.log("fsdf");
+		console.log(event);
+		event.preventDefault();
+		console.log(formIsValid);
+		if (!formIsValid) return;
+		console.log("submitted");
+		resetEmail();
+		resetPassword();
+	};
+	const emailClass = emailHasError ? "invalid" : "";
+	const passwordClass = passwordHasError ? "invalid" : "";
 	return (
 		<div className={classes.container}>
-			<form className={classes.login}>
+			<form
+				onSubmit={submitHandler}
+				className={classes.login}>
 				<input
-					type='text'
-					name='email/ph'
-					placeholder='Mobile number or email'
+					className={emailClass}
+					type="text"
+					name="email"
+					placeholder="Email"
+					value={email}
+					onChange={emailChangeHandler}
+					onBlur={emailIsTouched}
 				/>
+				{emailHasError && <ErrorElement text="Email is not valid" />}
 				<input
-					type='text'
-					name='password'
-					placeholder='Password'
+					className={passwordClass}
+					type="password"
+					name="password"
+					placeholder="Password"
+					value={password}
+					onChange={passwordChangeHandler}
+					onBlur={passwordIsTouched}
 				/>
-				<LogInButton
-					text='Log in'
-					path='/'
+				{passwordHasError && (
+					<ErrorElement text="Password must be at least 6 characters" />
+				)}
+
+				<Button
+					disabled={formIsValid ? true : false}
+					text="Log in"
+					onClick={() => console.log("clicked")}
 				/>
+
 				<SignUpButton
-					text='Create new account'
-					path='/name'
+					disabled={false}
+					text="Create new account"
+					onClick={() => {
+						console.log("abc");
+						navigate("name");
+					}}
 				/>
-				{/* <Link className={classes.loginButton}>Log in</Link> */}
-				{/* <Link
-					className={classes.signupButton}
-					to='/name'>
-					Create new account
-				</Link>
-				<Link className={classes.password}>Forgot password?</Link> */}
+
+				<Link className={classes.password}>Forgot password?</Link>
 			</form>
 		</div>
 	);

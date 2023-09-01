@@ -34,14 +34,6 @@
 .imageContainer::-webkit-scrollbar {
 	width: 0px;
 }
-.imageContainer img {
-	justify-content: space-between;
-	margin-right: 8px;
-	width: 150px;
-	height: 250px;
-	border-radius: 5px;
-	object-fit: cover;
-}
 
 .name span {
 	color: black;

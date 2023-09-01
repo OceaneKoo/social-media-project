@@ -1,0 +1,10 @@
+/** @format */
+.container {
+	display: flex;
+	align-items: center;
+	width: 430px;
+	color: red;
+}
+.errorText {
+	margin: 5px;
+}

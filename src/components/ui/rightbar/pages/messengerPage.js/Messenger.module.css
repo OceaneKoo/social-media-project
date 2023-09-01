@@ -1,15 +1,17 @@
 /** @format */
 .messageContainer {
+	width: 350px;
 }
+
 .search {
-	width: 80%;
-	height: 30px;
+	width: 90%;
+	height: 40px;
 	background-color: #f0efeb;
 	border-radius: 30px;
 	display: flex;
 	align-items: center;
 	margin: 10px auto;
-	/* box-shadow: 10px 5px 5px white; */
+	box-shadow: 10px 5px 5px white;
 }
 .searchIcon {
 	font-size: 20px !important;
@@ -17,9 +19,16 @@
 }
 .searchInput {
 	border: none;
-	/* width: 70px; */
 	background-color: #f0efeb;
 }
 .searchInput:focus {
 	outline: none;
+}
+.name {
+	font-weight: bold;
+	margin: 5px 0px;
+}
+.noti {
+	font-weight: lighter;
+	font-size: 13px;
 }

@@ -1,0 +1,38 @@
+/** @format */
+
+.bgColor {
+	width: 500px;
+	height: auto;
+	background-color: rgba(241, 211, 211, 0.5);
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.searchFri {
+	width: 80%;
+	margin: 10px;
+	padding: 10px;
+	background-color: #f0efeb;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	font-size: 1rem;
+}
+.Button {
+	font-size: 1rem;
+	border: none;
+	background-color: white;
+	font-weight: bold;
+	color: steelblue;
+	padding: 8px 12px;
+	margin: 5px;
+	border-radius: 10px;
+}
+.Button:hover {
+	background-color: #f0efeb;
+}
+.text {
+	margin: 10px;
+}

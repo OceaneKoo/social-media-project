@@ -6,10 +6,10 @@
 	/* margin: 10px; */
 	display: flex;
 	flex-direction: column;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	align-items: center;
 	justify-content: center;
-	background-color: #f0efeb;
+	background-color: white;
 	/* box-sizing: content-box; */
 	/* text-lign: start; */
 }
@@ -38,4 +38,12 @@
 .signUpButton:hover {
 	background-color: rgb(204, 200, 200);
 	color: #858483;
+}
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+	background-color: #ccc;
+	color: #292929;
+	border-color: #ccc;
+	cursor: not-allowed;
 }

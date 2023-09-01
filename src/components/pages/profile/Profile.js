@@ -1,20 +1,20 @@
 /** @format */
 
-import React from 'react';
-import coverPhoto from '../../../assets/images/pic2.jpg';
-import classes from './Profile.module.css';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import profilePic from '../../../assets/images/pic3.jpg';
-import img1 from '../../../assets/images/friends/img-1.jpg';
-import img2 from '../../../assets/images/friends/img-2.jpg';
-import img3 from '../../../assets/images/friends/img-3.jpg';
-import img4 from '../../../assets/images/friends/img-4.jpg';
-import img5 from '../../../assets/images/friends/img-5.jpg';
-import EditIcon from '@mui/icons-material/Edit';
-import { users as friends } from '../../../assets/profile-data/dummy-data';
-import YourPost from './nav-items/post-page/YourPost';
-import FriendPage from './nav-items/friend-page/FriendPage';
-import Media from './nav-items/video/Media';
+import React from "react";
+import coverPhoto from "../../../assets/images/pic2.jpg";
+import classes from "./Profile.module.css";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import profilePic from "../../../assets/images/pic3.jpg";
+import img1 from "../../../assets/images/friends/img-1.jpg";
+import img2 from "../../../assets/images/friends/img-2.jpg";
+import img3 from "../../../assets/images/friends/img-3.jpg";
+import img4 from "../../../assets/images/friends/img-4.jpg";
+import img5 from "../../../assets/images/friends/img-5.jpg";
+import EditIcon from "@mui/icons-material/Edit";
+import { users as friends } from "../../../assets/profile-data/dummy-data";
+import { YourPost } from "./nav-items/post-page/YourPost";
+import FriendPage from "./nav-items/friend-page/FriendPage";
+import Media from "./nav-items/video/Media";
 export default function Profile() {
 	return (
 		<React.Fragment>
@@ -49,22 +49,23 @@ export default function Profile() {
 						</div>
 						<p className={classes.editProfile}>
 							<span>
-								<EditIcon sx={{ fontSize: '20px' }} />
+								<EditIcon sx={{ fontSize: "20px" }} />
 							</span>
 							Edit profile
 						</p>
 					</div>
 				</section>
 				<div className={classes.link}>
-					<a href='#'>Posts</a>
-					<a href='#'>About</a>
-					<a href='#'>Friends</a>
-					<a href='#'>Photos</a>
-					<a href='#'>Videos</a>
+					<a href="#">Posts</a>
+					<a href="#">About</a>
+					<a href="#">Friends</a>
+					<a href="#">Photos</a>
+					<a href="#">Videos</a>
 				</div>
-				{/* <FriendPage />
-				<YourPost /> */}
-				<Media isVideo='true' />
+				<YourPost />
+				{/* <FriendPage /> */}
+
+				{/* <Media isVideo='true' /> */}
 			</div>
 		</React.Fragment>
 	);

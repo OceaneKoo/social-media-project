@@ -1,0 +1,28 @@
+/** @format */
+
+.grid {
+	height: 60px;
+}
+.border {
+	width: 40px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #f0efeb;
+}
+.box {
+	display: flex;
+	align-items: center;
+	margin: 0px 0px 10px 0px;
+	background-color: white;
+	align-items: center;
+	height: 100%;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+.box:hover {
+	background-color: #f0efebcc;
+}

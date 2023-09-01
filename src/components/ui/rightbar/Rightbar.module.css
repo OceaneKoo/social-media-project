@@ -1,9 +1,0 @@
-/** @format */
-
-.rightbarContainer {
-	height: calc(100vh - 50px);
-	overflow-y: scroll;
-}
-.rightbarContainer::-webkit-scrollbar {
-	width: 0px;
-}

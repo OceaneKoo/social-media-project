@@ -1,29 +1,35 @@
 /** @format */
+import { UseModalPost } from "../../../../../login/hook/modal";
 
-import React, { useRef, useEffect } from 'react';
-import WorkIcon from '@mui/icons-material/Work';
-import Posting from '../../../../ui/feed/Posting';
-import { Grid, Card, CardHeader, CardContent, Typography } from '@mui/material';
-import classes from './YourPost.module.css';
-import SchoolIcon from '@mui/icons-material/School';
-import HouseIcon from '@mui/icons-material/House';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import story1 from '../../../../../assets/images/story/cat1.jpg';
-import story2 from '../../../../../assets/images/story/cat2.jpg';
-import story3 from '../../../../../assets/images/story/cat3.jpg';
-import { users as friends } from '../../../../../assets/profile-data/dummy-data';
-import { data as images } from '../../../../../assets/profile-data/profile-data';
-import CustomCard from './CustomComponent';
-import profilePic from '../../../../../assets/images/pic3.jpg';
-import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
-import CollectionsIcon from '@mui/icons-material/Collections';
-import CelebrationIcon from '@mui/icons-material/Celebration';
+import { Link } from "react-router-dom";
+import React, { useRef, useEffect } from "react";
+import WorkIcon from "@mui/icons-material/Work";
+import Posting from "../../../../ui/feed/Posting";
+import { Grid, Card, CardContent, Typography } from "@mui/material";
+import classes from "./YourPost.module.css";
+import SchoolIcon from "@mui/icons-material/School";
+import HouseIcon from "@mui/icons-material/House";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import story1 from "../../../../../assets/images/story/cat1.jpg";
+import story2 from "../../../../../assets/images/story/cat2.jpg";
+import story3 from "../../../../../assets/images/story/cat3.jpg";
+import { users as friends } from "../../../../../assets/profile-data/dummy-data";
+import { data as images } from "../../../../../assets/profile-data/profile-data";
+import CustomCard from "./CustomComponent";
+import profilePic from "../../../../../assets/images/pic3.jpg";
+import VideoCameraBackIcon from "@mui/icons-material/VideoCameraBack";
+import CollectionsIcon from "@mui/icons-material/Collections";
+import CelebrationIcon from "@mui/icons-material/Celebration";
+import useModal from "../../../../../login/hook/modal";
+import CreatePostModal from "../../create-post/CreatePostModal";
+import { Image } from "../../../../ui/topbar/Topbar";
+import { useNavigate } from "react-router-dom";
 
-export default function YourPost(props) {
+export function YourPost(props) {
 	return (
 		<div className={classes.container}>
 			<Grid
-				sx={{ width: '1000px', margin: 'auto' }}
+				sx={{ width: "1000px", margin: "auto" }}
 				container>
 				<Grid
 					item
@@ -32,56 +38,56 @@ export default function YourPost(props) {
 						<Card className={classes.cardContainer}>
 							<CardContent>
 								<Typography
-									sx={{ fontWeight: 'bold' }}
+									sx={{ fontWeight: "bold" }}
 									className={classes.header}
-									variant='h5'
-									component='h5'>
+									variant="h5"
+									component="h5">
 									Intro
 								</Typography>
 								<Typography
 									className={classes.box}
-									variant='p'
-									component='div'
-									sx={{ marginBottom: '10px' }}>
+									variant="p"
+									component="div"
+									sx={{ marginBottom: "10px" }}>
 									Add bio
 								</Typography>
 								<Typography
 									className={classes.icon}
-									variant='p'
-									component='div'>
-									<SchoolIcon sx={{ marginRight: '5px' }} />
+									variant="p"
+									component="div">
+									<SchoolIcon sx={{ marginRight: "5px" }} />
 									went to BEHS(2)Amarapura
 								</Typography>
 								<Typography
 									className={classes.icon}
-									variant='p'
-									component='div'>
-									<HouseIcon sx={{ marginRight: '5px' }} />
-									lives in{' '}
-									<span style={{ fontWeight: 'bold', marginLeft: '5px' }}>
-										{' '}
+									variant="p"
+									component="div">
+									<HouseIcon sx={{ marginRight: "5px" }} />
+									lives in{" "}
+									<span style={{ fontWeight: "bold", marginLeft: "5px" }}>
+										{" "}
 										Mandalay
 									</span>
 								</Typography>
 								<Typography
 									className={classes.icon}
-									variant='p'
-									component='div'>
-									<FavoriteIcon sx={{ marginRight: '5px' }} />
+									variant="p"
+									component="div">
+									<FavoriteIcon sx={{ marginRight: "5px" }} />
 									Single
 								</Typography>
 								<Typography
 									className={classes.box}
-									variant='p'
-									component='div'
-									sx={{ marginBottom: '10px' }}>
+									variant="p"
+									component="div"
+									sx={{ marginBottom: "10px" }}>
 									Edit details
 								</Typography>
 								<Typography
 									className={classes.box}
-									variant='p'
-									component='div'
-									sx={{ marginBottom: '10px' }}>
+									variant="p"
+									component="div"
+									sx={{ marginBottom: "10px" }}>
 									Add hobbies
 								</Typography>
 								<div className={classes.imageContainer}>
@@ -92,7 +98,7 @@ export default function YourPost(props) {
 									<div className={classes.name}>
 										<img src={story2} />
 										<span>featured name</span>
-									</div>{' '}
+									</div>{" "}
 									<div className={classes.name}>
 										<img src={story3} />
 										<span>featured name</span>
@@ -100,18 +106,18 @@ export default function YourPost(props) {
 								</div>
 								<Typography
 									className={classes.box}
-									variant='p'
-									component='div'
-									sx={{ marginBottom: '10px' }}>
-									Edit featured{' '}
+									variant="p"
+									component="div"
+									sx={{ marginBottom: "10px" }}>
+									Edit featured{" "}
 								</Typography>
 							</CardContent>
 						</Card>
 						<Card className={classes.cardContainer}>
 							<CardContent>
 								<CustomCard
-									header='Photos'
-									action='See all photos'
+									header="Photos"
+									action="See all photos"
 								/>
 								<div className={classes.photoContainer}>
 									{images.map((image) => (
@@ -127,13 +133,13 @@ export default function YourPost(props) {
 						<Card className={classes.cardContainer}>
 							<CardContent>
 								<CustomCard
-									header='friends'
-									action='See all friends'
+									header="friends"
+									action="See all friends"
 								/>
 								<Typography
-									sx={{ marginLeft: '5px', fontSize: '13px' }}
-									variant='p'
-									component='p'>
+									sx={{ marginLeft: "5px", fontSize: "13px" }}
+									variant="p"
+									component="p">
 									{`${friends.length} friends`}
 								</Typography>
 								<div>
@@ -160,8 +166,8 @@ export default function YourPost(props) {
 						<Card className={classes.cardContainer}>
 							<CardContent>
 								<CustomCard
-									header='Life events'
-									action='See all'
+									header="Life events"
+									action="See all"
 								/>
 								<div className={classes.jobContainer}>
 									<div className={`${classes.paper} ${classes.whitePaper}`}>
@@ -185,8 +191,8 @@ export default function YourPost(props) {
 					item
 					xs={7}>
 					<div className={classes.scrollable}>
-						<Card>
-							<CardContent>
+						<Post />
+						{/* <CardContent>
 								<div className={classes.inputContainer}>
 									<img src={profilePic} />
 									<input
@@ -208,39 +214,97 @@ export default function YourPost(props) {
 										<span>life events</span>
 									</div>
 								</div>
-							</CardContent>
-						</Card>
+							</CardContent> */}
+
 						<Posting
-							type='img'
 							srcFile={story1}
-							caption='cuteee'
+							type="img"
+							caption="cuteee"
+							date="December 23"
+							name="Smith"
+							caption="hi fdsdfsdfsdf"
 						/>
 						<Posting
-							type='img'
 							srcFile={story1}
-							caption='cuteee'
+							type="img"
+							caption="cuteee"
+							date="December 23"
+							name="Smith"
+							caption="hi fdsdfsdfsdf"
 						/>
 						<Posting
-							type='img'
 							srcFile={story1}
-							caption='cuteee'
+							type="img"
+							caption="cuteee"
+							date="December 23"
+							name="Smith"
+							caption="hi fdsdfsdfsdf"
 						/>
 						<Posting
-							type='img'
 							srcFile={story1}
-							caption='cuteee'
+							type="img"
+							caption="cuteee"
+							date="December 23"
+							name="Smith"
+							caption="hi fdsdfsdfsdf"
 						/>
 						<Posting
-							type='img'
+							type="img"
 							srcFile={story1}
-							caption='cuteee'
-							name='Leila Park'
-							date='July 30'
+							caption="cuteee"
+							name="Leila Park"
+							date="July 30"
 							profilePicture={profilePic}
 						/>
 					</div>
 				</Grid>
 			</Grid>
+		</div>
+	);
+}
+export function Post() {
+	// const { isModalOpen, closeModal, openModal, clickFromOutside, modalRef } =
+	// 	useModal();
+	const navigation = useNavigate();
+	const clickHandler = () => {
+		navigation("/home/post");
+	};
+	return (
+		<div>
+			<Card sx={{ margin: "15px 0px" }}>
+				<CardContent>
+					<div className={classes.inputContainer}>
+						<Image />
+						<input
+							type="text"
+							placeholder="what are you thinking"
+							onClick={clickHandler}
+						/>
+					</div>
+					<div className={classes.inputContainer}>
+						<div className={classes.items}>
+							<VideoCameraBackIcon sx={{ color: "red" }} />
+							<span>live video</span>
+						</div>
+						<div className={classes.items}>
+							<CollectionsIcon sx={{ color: "green" }} />
+							<span>Image/Video</span>
+						</div>
+						<div className={classes.items}>
+							<CelebrationIcon sx={{ color: "blue" }} />
+							<span>life events</span>
+						</div>
+					</div>
+				</CardContent>
+			</Card>
+			{/* {isModalOpen && (
+				<CreatePostModal
+					isOpen={isModalOpen}
+					onClose={closeModal}
+					closeOutside={clickFromOutside}
+					modalref={modalRef}
+				/>
+			)} */}
 		</div>
 	);
 }

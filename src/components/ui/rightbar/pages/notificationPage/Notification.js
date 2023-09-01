@@ -1,43 +1,29 @@
 /** @format */
-
-import React from 'react';
-import Badge from '@mui/material/Badge';
-import { Card, Avatar, CardHeader, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import classes from './Notification.module.css';
-const StyledBadge = styled(Badge)(({ theme }) => ({
-	'& .MuiBadge-badge': {
-		right: -3,
-		top: 30,
-		padding: '0 4px',
-	},
-}));
-export default function () {
+import { Card, CardHeader } from "@mui/material";
+import NotiBox from "../messengerPage.js/BoxStyle";
+import styles from "../Style.module.css";
+import classes from "./Notification.module.css";
+// import { useEffect, useRef } from "react";
+export default function NotificationModal({ isOpen, onClose, modalRef }) {
+	const cssClass = isOpen
+		? `${styles.card} ${classes.container}`
+		: styles.invisible;
 	return (
-		<div>
+		<div
+			className={cssClass}
+			ref={modalRef}
+			onClick={onClose}>
 			<Card>
-				<CardHeader
-					title={
-						<Typography
-							variant='h1'
-							component='h2'
-							style={{ fontSize: '1rem' }}>
-							<span style={{ fontWeight: 'bold' }}>John</span>liked your post.
-						</Typography>
-					}
-					subheader='4 hours ago'
-					avatar={
-						<StyledBadge
-							badgeContent={<ThumbUpIcon className={classes.likeIcon} />}
-							color='info'>
-							<Avatar
-								aria-label='friend request'
-								alt=''
-								src='https://i.pinimg.com/564x/5a/10/5d/5a105d7900c685466e5ffa860509e471.jpg'></Avatar>{' '}
-						</StyledBadge>
-					}
-				/>
+				<CardHeader title="Notifications" />
+				<NotiBox>
+					<p>
+						<span style={{ fontWeight: "bold", fontSize: "17px", margin: "0" }}>
+							John
+						</span>{" "}
+						sent you a friend request
+					</p>
+					<p>20 hrs ago</p>
+				</NotiBox>
 			</Card>
 		</div>
 	);

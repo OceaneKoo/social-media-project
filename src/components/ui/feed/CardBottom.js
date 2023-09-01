@@ -1,47 +1,63 @@
 /** @format */
 
-import React from 'react';
-import { Grid, IconButton } from '@mui/material';
-import classes from './CardBottom.module.css';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import SendIcon from '@mui/icons-material/Send';
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-
+import React from "react";
+import { Grid, IconButton } from "@mui/material";
+import classes from "./CardBottom.module.css";
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import ReplyIcon from "@mui/icons-material/Reply";
+import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import RecommendIcon from "@mui/icons-material/Recommend";
 export default function CardBottom() {
 	return (
-		<div className={classes.icon}>
-			<Grid
-				container
-				spacing={2}>
+		<div>
+			<div className={classes.container}>
+				{/* <ThumbUpIcon
+					className={classes.icon}
+					sx={{ fontSize: "18px" }}
+				/> */}
+				<RecommendIcon className={classes.icon} />
+				<span style={{ marginLeft: "5px" }}>365</span>
+				<div className={classes.position}>
+					<span>37 comments </span>
+					<span>55 shares</span>
+				</div>
+			</div>
+			<Grid container>
 				<Grid
+					className={classes.center}
 					item
 					xs={4}
-					container
-					alignItems='center'>
-					<IconButton aria-label='like'>
-						<ThumbUpIcon />
-					</IconButton>
-					<span>Like</span>
+					container>
+					<div className={`${classes.center} ${classes.box}`}>
+						<IconButton aria-label="like">
+							<ThumbUpOffAltIcon />
+						</IconButton>
+						<span>Like</span>
+					</div>
 				</Grid>
 				<Grid
 					item
 					container
-					alignItems='center'
-					xs={4}>
-					<IconButton aria-label='comment'>
-						<ChatBubbleOutlineIcon />
-					</IconButton>
-					<span>Comment</span>
+					xs={4}
+					className={classes.center}>
+					<div className={`${classes.center} ${classes.box}`}>
+						<IconButton aria-label="comment">
+							<ChatBubbleOutlineIcon sx={{ fontSize: "20px" }} />
+						</IconButton>
+						<span>Comment</span>
+					</div>
 				</Grid>
 				<Grid
 					item
 					xs={4}
 					container
-					alignItems='center'>
-					<IconButton aria-label='share'>
-						<SendIcon />
-					</IconButton>
-					<span>Share</span>
+					className={classes.center}>
+					<div className={`${classes.center} ${classes.box}`}>
+						<IconButton aria-label="share">
+							<ReplyIcon />
+						</IconButton>
+						<span>Share</span>
+					</div>
 				</Grid>
 			</Grid>
 		</div>

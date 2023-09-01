@@ -2,6 +2,8 @@
 .container {
 	background-color: #f0efeb;
 	padding-left: 20px;
+	margin: 0;
+	border: 1px solid #f0efeb;
 }
 .cardContainer {
 	display: flex;

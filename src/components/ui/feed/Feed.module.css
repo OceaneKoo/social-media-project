@@ -1,9 +1,12 @@
 /** @format */
 
 .postContainer {
+	width: 600px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	height: calc(100vh - 50px);
+	background-color: #f0efeb;
+	margin: 0px 100px;
 }
 .postContainer::-webkit-scrollbar {
 	width: 0px;
